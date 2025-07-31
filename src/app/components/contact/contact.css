@@ -1,0 +1,39 @@
+.form-control:focus{
+    box-shadow: none;
+}
+
+.line {
+    width: 80px;
+    height: 4px;
+    background-color: rgb(44, 62, 80);;
+}
+
+.color{
+    color: rgb(44, 62, 80);
+}
+
+button{
+    background-color: #1abc9c;
+}
+
+input::placeholder{
+    color: #595C5F !important;
+}
+
+ label{
+    position: absolute;
+    font-size: 18px;
+    color: #1abc9c;
+    opacity: 0;
+    transition: .6s top;
+    z-index: 1;
+}
+
+input:not(:placeholder-shown) + label {
+    opacity: 1;
+    top: -10px;
+    z-index: 3;
+} 
+button:hover{
+    background-color: #1abc9c;
+}

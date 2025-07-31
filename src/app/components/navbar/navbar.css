@@ -1,0 +1,32 @@
+.navbar{
+    background-color: #2c3e50 !important;
+}
+a{
+    font-weight: 700;
+    font-size: 16px;
+    color: rgb(255 255 255);
+    margin-right: 16px;
+}
+.navbar-brand:hover,.nav-link:hover{
+    color: #fff !important;
+
+}
+
+nav{
+    transition: .6s padding;
+}
+
+.navbar-shrink{
+    padding-top: 0.5rem !important; 
+    padding-bottom: 0.5rem !important;
+}
+.navbar-collapse{
+    flex-grow: 0 !important;
+}
+.nav-link:focus , .navbar-brand:focus{
+    color: #fff;
+}
+
+.color{
+    background-color: #1abc9c;;
+}

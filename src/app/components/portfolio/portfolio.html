@@ -1,0 +1,82 @@
+<section class="pt-5 mt-5">
+    <div class="container py-4">
+        <h1 class="text-uppercase mb-3 fw-bolder color text-center mt-3">portfolio component</h1>
+        
+        <div class="d-flex justify-content-center align-items-center mb-3 ">
+        <div class="line  me-3 color"></div>
+        <i class="fa-solid fa-star color "></i>
+        <div class="line  ms-3 color"></div>
+    </div>
+
+        <div class="row g-5">
+             @for (image of images; track $index) { 
+                <div class="col-md-6 col-lg-4">
+                <div class="image position-relative">                
+                <img class="w-100 rounded-3" [src]="image" alt="1">
+                <div (click)="zoomImg(image)"   class="layer rounded-3 position-absolute start-0 w-100 top-0 end-0 h-100 d-flex justify-content-center align-items-center"><i class="fa-solid fa-plus text-white plus"></i></div>
+                </div>
+                </div>
+           
+             } 
+            <!-- <div class="col-md-6 col-lg-4">
+                <div class="image position-relative">                
+                <img class="w-100 rounded-3" src="/images/2.png" alt="1">
+                <div (click)="zoomImg()" class="layer rounded-3 position-absolute start-0 w-100 top-0 end-0 h-100 d-flex justify-content-center align-items-center"><i class="fa-solid fa-plus text-white plus"></i></div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="image position-relative">                
+                <img class="w-100 rounded-3" src="/images/3.png" alt="1">
+                <div class="layer rounded-3 position-absolute start-0 w-100 top-0 end-0 h-100 d-flex justify-content-center align-items-center"><i class="fa-solid fa-plus text-white plus"></i></div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="image position-relative">                
+                <img class="w-100 rounded-3" src="/images/1.png" alt="1">
+                <div class="layer rounded-3 position-absolute start-0 w-100 top-0 end-0 h-100 d-flex justify-content-center align-items-center"><i class="fa-solid fa-plus text-white plus"></i></div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="image position-relative">                
+                <img class="w-100 rounded-3" src="/images/2.png" alt="1">
+                <div class="layer rounded-3 position-absolute start-0 w-100 top-0 end-0 h-100 d-flex justify-content-center align-items-center"><i class="fa-solid fa-plus text-white plus"></i></div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="image position-relative">                
+                <img class="w-100 rounded-3" src="/images/3.png" alt="1">
+                <div class="layer rounded-3 position-absolute start-0 w-100 top-0 end-0 h-100 d-flex justify-content-center align-items-center"><i class="fa-solid fa-plus text-white plus"></i></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+
+
+@for (image  of images; track $index){
+        @if (imgSrc) {
+             <div (click)="close()" class="lighbox-container d-flex justify-content-center align-items-center position-fixed top-0 start-0 end-0 bottom-0">
+        <div class="lighbox-item d-flex align-items-center justify-content-between position-relative">
+            <img class="w-100" (click)="$event.stopPropagation()"  [src]="imgSrc" alt="1"> 
+        </div>
+    </div>
+        } 
+         @else {
+             <div class="lighbox-container d-none justify-content-center align-items-center position-fixed top-0 start-0 end-0 bottom-0">
+        <div class="lighbox-item d-none align-items-center justify-content-between position-relative">
+            <img class="w-100"  [src]="imgSrc" alt="1"> 
+        </div>
+    </div>
+        }
+
+}
+    
+
+    
+</section> 
+
+
